@@ -1,4 +1,4 @@
-# Computo Peru
+# Kira
 
 La mejor plataforma para comprar productos online y irl. La plataforma da las herramientas para
 que los usuarios puedan ingresar y explorar en la sección productos lo que pueden solicitar/comprar
