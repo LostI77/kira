@@ -25,7 +25,7 @@ Seccion con información para el desarrollo del proyecto (solo paginas) que habr
 
 Tabla del estado del desarrollo de las paginas.
 
-| Pagina                  | ✅  | 🔥  | ❌  |
+| Paginas                 | ✅  | 🔥  | ❌  |
 | ----------------------- | --- | --- | --- |
 | Inicio                  |     |     |     |
 | Quienes somos           |     |     |     |
@@ -52,53 +52,14 @@ Estados de los componentes en desarrollo.
 | Contador animado | En diseño |
 | Product Card     | En diseño |
 
-## React + TypeScript + Vite
+## Api
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+puedes usar la api que desees segun el back-end framework con el que mas te sientas comodo.
 
-Currently, two official plugins are available:
+Aqui una lista de los lenguajes con back-end soportados para su uso en este proyecto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Python
 
-### Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
-```
+- [@fast-api](./src/apis/fast-api) ✅
+- [@flask-api](./src/apis/flask-api) ❌
+- [@django-api](./src/apis/django-api) ❌

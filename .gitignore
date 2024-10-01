@@ -1,3 +1,17 @@
+# Build
+/client
+/server
+*.tsbuildinfo
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
 # Logs
 logs
 *.log
@@ -22,3 +36,50 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Python
+.venv
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*$py.class
+
+*.manifest
+*.spec
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# PyBuilder
+.pybuilder/
+target/

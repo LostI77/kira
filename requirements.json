@@ -1,0 +1,6 @@
+{
+  "python-requirements": {
+    "fast-api": "pip install \"fastapi[standard]\"",
+    "uvicorn": "pip install 'uvicorn[standard]'"
+  }
+}
