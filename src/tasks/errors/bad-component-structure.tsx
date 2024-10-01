@@ -1,4 +1,4 @@
-import React from "react"; // <- Opcional, si no lo usas es innecesario.
+// import React from "react"; // <- Opcional, si no lo usas es innecesario.
 
 /*
     El nombre de los componentes tiene se espera que sea el mismo que el archivo
@@ -76,3 +76,5 @@ const BadComponentStructure = () => {
     </>
   );
 };
+
+export default BadComponentStructure;
