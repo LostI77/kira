@@ -1,92 +1,93 @@
 [
-    {
-        "id": "user_1",
-        "card": [
-            {
-                "name": "Wireless Headphones",
-                "price": 99.99,
-                "amount": 2
-            }
-        ]
-    },
-    {
-        "id": "user_2",
-        "card": [
-            {
-                "name": "Smartwatch",
-                "price": 199.99,
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "id": "user_3",
-        "card": [
-            {
-                "name": "Portable Charger",
-                "price": 24.99,
-                "amount": 3
-            },
-            {
-                "name": "Laptop Stand",
-                "price": 29.99,
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "id": "user_4",
-        "card": [
-            {
-                "name": "Blender",
-                "price": 39.99,
-                "amount": 2
-            }
-        ]
-    },
-    {
-        "id": "user_5",
-        "card": [
-            {
-                "name": "4K Monitor",
-                "price": 299.99,
-                "amount": 1
-            },
-            {
-                "name": "USB-C Hub",
-                "price": 34.99,
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "id": "user_6",
-        "card": [
-            {
-                "name": "Smartphone Case",
-                "price": 19.99,
-                "amount": 5
-            }
-        ]
-    },
-    {
-        "id": "user_7",
-        "card": [
-            {
-                "name": "Electric Grill",
-                "price": 79.99,
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "id": "user_8",
-        "card": [
-            {
-                "name": "Refrigerator",
-                "price": 999.99,
-                "amount": 1
-            }
-        ]
-    }
+  {
+    "id": "user_1",
+    "card": [
+      {
+        "src": "/img/products/JBL_Portable_Bluetooth_Speaker.jpeg",
+        "name": "JBL Portable Bluetooth Speaker",
+        "price": 49.99,
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "user_2",
+    "card": [
+      {
+        "name": "Smartwatch",
+        "price": 199.99,
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "user_3",
+    "card": [
+      {
+        "name": "Portable Charger",
+        "price": 24.99,
+        "amount": 3
+      },
+      {
+        "name": "Laptop Stand",
+        "price": 29.99,
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "user_4",
+    "card": [
+      {
+        "name": "Blender",
+        "price": 39.99,
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "user_5",
+    "card": [
+      {
+        "name": "4K Monitor",
+        "price": 299.99,
+        "amount": 1
+      },
+      {
+        "name": "USB-C Hub",
+        "price": 34.99,
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "user_6",
+    "card": [
+      {
+        "name": "Smartphone Case",
+        "price": 19.99,
+        "amount": 5
+      }
+    ]
+  },
+  {
+    "id": "user_7",
+    "card": [
+      {
+        "name": "Electric Grill",
+        "price": 79.99,
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "id": "user_8",
+    "card": [
+      {
+        "name": "Refrigerator",
+        "price": 999.99,
+        "amount": 1
+      }
+    ]
+  }
 ]

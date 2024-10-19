@@ -4,6 +4,8 @@ export type Product = {
   price: number;
 };
 
+export type ISCProduct = Product & { amount: number };
+
 export type SupportCardData = { title: string; description: string };
 
 export type Testimonial = {

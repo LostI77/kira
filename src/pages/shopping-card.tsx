@@ -5,15 +5,16 @@ import { Icon } from "@iconify/react";
 import { PurchaseSummary } from "@composites/purchase-summary";
 import { ShoppingItem } from "@composites/shopping-item";
 import { Button } from "@components/button";
+import { ISCProduct } from "@/main-types";
 
 export const ShoppingCard = () => {
   const { shopping_card } = useLoaderData() as {
-    shopping_card: { name: string; price: number; amount: number }[];
+    shopping_card: ISCProduct[];
   };
 
-  const [productsCard, setProductsCard] = useState<
-    { name: string; price: number; amount: number }[]
-  >(shopping_card || []);
+  const [productsCard, setProductsCard] = useState<ISCProduct[]>(
+    shopping_card || []
+  );
 
   const [finalPrices, setFinalPrices] = useState<Record<string, number>>({});
   const [totalPrice, setTotalPrice] = useState<number>(0);
@@ -30,11 +31,12 @@ export const ShoppingCard = () => {
     setTotalPrice(parseFloat(Number(total).toFixed(2)));
   }, [productsCard]);
 
-  const handleAmount = (name: string, type: "less" | "more") => {
+  const handleAmount = async (name: string, type: "less" | "more") => {
+    let current: number = 0;
     setProductsCard((prev) => {
       return prev.map((product) => {
         if (product.name === name) {
-          let current: number = product.amount;
+          current = product.amount;
 
           if (type !== "more" && current > 1) current--;
           if (type == "more") current++;
@@ -55,6 +57,27 @@ export const ShoppingCard = () => {
         return product;
       });
     });
+
+    try {
+      const response = await fetch(`/api/users/user_1/shopping-card`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, current, type }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("Error updating product amount:", errorData.detail);
+        return;
+      }
+
+      const result = await response.json();
+      console.log("New product amount:", result.new_amount);
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   const handleRemoveProduct = async (name: string) => {
@@ -84,6 +107,7 @@ export const ShoppingCard = () => {
       console.error("Error:", error);
     }
   };
+
   return (
     <div className="flex flex-col flex-nowrap m-0 py-16 px-[120px] gap-0">
       <div className="mb-4 py-1">
