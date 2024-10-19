@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
 
 export const Header = () => {
   return (
@@ -13,20 +14,25 @@ export const Header = () => {
           />
         </Link>
         <nav className="py-0 px-8">
-          <ul className="inline-flex gap-6">
-            <li className="">
-              <Link to="/quienes-somos" target="_self" className="">
-                Quienes somos
-              </Link>
-            </li>
-            <li className="">
-              <Link to="/productos" target="_self" className="">
+          <ul className="inline-flex items-center gap-6">
+            <li>
+              <Link to={"/productos"} target="_self" rel="noreferrer noopener">
                 Productos
               </Link>
             </li>
-            <li className="">
-              <Link to="/soporte" target="_self" className="">
+            <li>
+              <Link to={"/soporte"} target="_self" rel="noreferrer noopener">
                 Soporte
+              </Link>
+            </li>
+            <li>
+              <Link to={"login"} target="_self" rel="noreferrer noopener">
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link to={"/carrito"} target="_self" rel="noreferrer noopener">
+                <Icon icon={"ph:shopping-cart-thin"} />
               </Link>
             </li>
           </ul>

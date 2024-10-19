@@ -1,0 +1,112 @@
+[
+  {
+    "src": "/img/products/bluetooth_headphones.jpg",
+    "name": "Wireless Headphones",
+    "price": 99.99
+  },
+  {
+    "src": "/img/products/JBL_Portable_Bluetooth_Speaker.jpeg",
+    "name": "JBL Portable Bluetooth Speaker",
+    "price": 49.99
+  },
+  {
+    "src": "/img/products/smartphone_case.jpg",
+    "name": "Smartphone Case",
+    "price": 19.99
+  },
+  {
+    "src": "/img/products/ASUS_4K_57-1716725462.jpg",
+    "name": "Asus 4K Monitor",
+    "price": 299.99
+  },
+  {
+    "src": "/img/products/wireless-gaming-mouse-8f77473e.jpeg",
+    "name": "Wireless Gaming Mouse",
+    "price": 39.99
+  },
+  {
+    "src": "/img/products/keychronv7custommechanicalkeyboard-1670491631271-1152616495.jpg",
+    "name": "Mechanical Keyboard",
+    "price": 79.99
+  },
+  {
+    "src": "/img/products/718669ef-1dba-43a1-ad46-.jpeg",
+    "name": "Laptop Stand",
+    "price": 29.99
+  },
+  {
+    "src": "/img/products/5bae68b346e0fb0026161ab4-3869954727.jpg",
+    "name": "External Hard Drive",
+    "price": 89.99
+  },
+  {
+    "src": "/img/products/portable-charger-2264427906.jpg",
+    "name": "Portable Charger",
+    "price": 24.99
+  },
+  {
+    "src": "/img/products/usb-c-multiport-hub-50h55aa8730873-578724726.jpg",
+    "name": "USB-C Hub",
+    "price": 34.99
+  },
+  {
+    "src": "/img/products/610LLQC8DhL._AC_SL1500_-3504634219.jpg",
+    "name": "Smartwatch",
+    "price": 199.99
+  },
+  {
+    "src": "/img/products/feb2cc7b-1854-4ccb.jpeg",
+    "name": "Fitness Tracker",
+    "price": 59.99
+  },
+  {
+    "src": "/img/products/71apwE6HGaL._AC_SL1500_-3637691981.jpg",
+    "name": "Wireless Earbuds",
+    "price": 89.99
+  },
+  {
+    "src": "/img/products/oculus_1590537-2397142440.jpg",
+    "name": "VR Headset",
+    "price": 249.99
+  },
+  {
+    "src": "/img/products/carrier-smart-thermostat-with-sensor-to-right-3977827676.png",
+    "name": "Smart Thermostat",
+    "price": 129.99
+  },
+  {
+    "src": "/img/products/63ba1fac-8ad5-471a-3229104542.jpeg",
+    "name": "Robot Vacuum",
+    "price": 299.99
+  },
+  {
+    "src": "/img/products/Tablet_1-1-1-557892481.png",
+    "name": "Tablet",
+    "price": 399.99
+  },
+  {
+    "src": "/img/products/image-1558239418.jpg",
+    "name": "Smart Light Bulb",
+    "price": 14.99
+  },
+  {
+    "src": "/img/products/Amcrest-TVL-960H-2073182328.jpg",
+    "name": "Home Security Camera",
+    "price": 99.99
+  },
+  {
+    "src": "/img/products/Prestige-Electric-Kettle-PKOSS-Black-2893288150.jpg",
+    "name": "Electric Kettle",
+    "price": 49.99
+  },
+  {
+    "src": "/img/products/MYair_2780_Secondary1-2325023503.png",
+    "name": "Air Purifier",
+    "price": 149.99
+  },
+  {
+    "src": "/img/products/71jJYt+niWL._AC_SL1500_-1987011444.jpg",
+    "name": "Coffee Machine",
+    "price": 79.99
+  }
+]

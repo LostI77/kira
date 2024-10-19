@@ -1,6 +1,7 @@
 {
   "python-requirements": {
-    "fast-api": "pip install \"fastapi[standard]\"",
-    "uvicorn": "pip install 'uvicorn[standard]'"
+    "fastapi": "pip install \"fastapi[standard]\"",
+    "uvicorn": "pip install 'uvicorn[standard]'",
+    "supabase": "pip install supabase"
   }
 }

@@ -2,55 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
-  color: #0e0e0e;
-  background-color: #fff;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 @layer base {
   @font-face {
     font-family: "Jura";
     font-style: normal;
     font-weight: 700;
     font-display: block;
-    src: url("/fonts/jura_normal_bold.woff2") format("woff2");
+    src: url("/fonts/Jura-Bold.woff2") format("woff2");
   }
   @font-face {
     font-family: "Jura";
     font-style: normal;
     font-weight: 600;
     font-display: block;
-    src: url("/fonts/jura_normal_semibold.woff2") format("woff2");
+    src: url("/fonts/Jura-SemiBold.woff2") format("woff2");
   }
   @font-face {
     font-family: "Jura";
     font-style: normal;
     font-weight: 500;
     font-display: block;
-    src: url("/fonts/jura_normal_medium.woff2") format("woff2");
+    src: url("/fonts/Jura-Medium.woff2") format("woff2");
   }
   @font-face {
     font-family: "Jura";
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: url("/fonts/jura_normal_regular.woff2") format("woff2");
+    src: url("/fonts/Jura-Regular.woff2") format("woff2");
   }
   @font-face {
     font-family: "Jura";
     font-style: normal;
     font-weight: 300;
-    font-display: swap;
-    src: url("/fonts/jura_normal_light.woff2") format("woff2");
+    font-display: block;
+    src: url("/fonts/Jura-Light.woff2") format("woff2");
   }
 
-  html {
+  :root {
+    color-scheme: dark;
+    color: #0e0e0e;
+    background-color: #fff;
+
+    font-synthesis: none;
     font-family: "Jura", sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }

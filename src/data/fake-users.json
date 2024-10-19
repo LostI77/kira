@@ -1,0 +1,34 @@
+[
+  { "id": "user_1", "email": "johndoe@gmail.com", "password": "password123" },
+  { "id": "user_2", "email": "janesmith@yahoo.com", "password": "password456" },
+  {
+    "id": "user_3",
+    "email": "mikejohnson@hotmail.com",
+    "password": "password789"
+  },
+  {
+    "id": "user_4",
+    "email": "emilydavis@gmail.com",
+    "password": "password101"
+  },
+  {
+    "id": "user_5",
+    "email": "chrisbrown@outlook.com",
+    "password": "password202"
+  },
+  {
+    "id": "user_6",
+    "email": "sarawatson@gmail.com",
+    "password": "password303"
+  },
+  {
+    "id": "user_7",
+    "email": "lukewilson@yahoo.com",
+    "password": "password404"
+  },
+  {
+    "id": "user_8",
+    "email": "emmaparker@hotmail.com",
+    "password": "password505"
+  }
+]

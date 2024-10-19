@@ -63,3 +63,15 @@ Aqui una lista de los lenguajes con back-end soportados para su uso en este proy
 - [@fast-api](./src/apis/fast-api) ✅
 - [@flask-api](./src/apis/flask-api) ❌
 - [@django-api](./src/apis/django-api) ❌
+
+### Go
+
+- [@gin-api](./src/apis/gin-api) ✅
+
+[Revisa los comandos para ejecutar las apis aqui](./API-GUIDE.md)
+
+## DB
+
+Para los datos puedes usar el servicio de **db** que mas prefieras.
+
+Con las Api's en python se estara usando [**supabase**](https://supabase.com), pero no es obligatorio usa la que desees y la cual se acomode a tus necesitades.
