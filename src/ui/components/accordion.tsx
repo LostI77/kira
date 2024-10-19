@@ -9,6 +9,7 @@ import {
   ForwardRefExoticComponent,
   isValidElement,
   ReactElement,
+  ReactNode,
   useState,
 } from "react";
 import { Icon } from "@iconify/react";
@@ -28,7 +29,9 @@ type TriggerProps = ComponentProps<"div"> & {
   isOpen?: boolean;
 };
 
-type ContentProps = ComponentProps<"div"> & {
+type ContentProps = {
+  className?: string;
+  children: ReactNode;
   isOpen?: boolean;
 };
 
@@ -91,7 +94,7 @@ Accordion.Trigger = ({ children, isOpen, handleAccordion, ...props }) => (
 
 Accordion.Trigger.displayName = "Accordion.Trigger";
 
-Accordion.Content = ({ className, children, isOpen, ...props }) => (
+Accordion.Content = ({ className, children, isOpen }) => (
   <motion.div
     className={cn("text-sm", className)}
     initial={{ height: 0, opacity: 0 }}
@@ -102,7 +105,6 @@ Accordion.Content = ({ className, children, isOpen, ...props }) => (
     }}
     exit={{ height: 0, opacity: 0 }}
     transition={{ duration: 0.3, ease: "easeInOut" }}
-    {...props}
   >
     {children}
   </motion.div>

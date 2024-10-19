@@ -66,10 +66,6 @@ async def read_product(product_name_id: str) -> dict:
 async def read_support() -> dict:
     return {"support": []}
 
-@app.get("/api/support/{blog_name_id}")
-async def read_support_blog(blog_name_id: str):
-    return { "support-blog": { "blog-name-id": blog_name_id } }
-
 @app.get("/api/support/cards")
 async def read_support_cards():
     file_path = os.path.join(os.getcwd(), "src", "data", "fake-support-cards.json")
@@ -91,7 +87,7 @@ async def read_shopping_card_by_id(user_id: str) -> Dict[str, Union[List[Product
     raise HTTPException(status_code=404, detail="Shopping card not found")
 
 @app.delete("/api/users/{user_id}/shopping-card")
-async def read_and_deleted_product(user_id: str, product_name: str) -> bool | HTTPException:
+async def read_and_deleted_product(user_id: str, product_name: str) -> bool:
     file_path = os.path.join(os.getcwd(), "src", "data", "fake-shopping-card.json")
 
      # Leer el archivo JSON

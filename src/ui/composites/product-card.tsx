@@ -21,7 +21,7 @@ const ProductCard = forwardRef<HTMLDivElement, ProductCardProps>(
       <div
         ref={ref}
         className={cn(
-          "flex flex-col items-start w-[330px] h-auto bg-white rounded-lg shadow-[0px_6px_8px_rgba(0,0,0,0.3)] m-0 p-0 gap-0",
+          "flex flex-col items-start w-[330px] h-min bg-white rounded-lg shadow-[0px_6px_8px_rgba(0,0,0,0.3)] m-0 p-0 gap-0",
           className
         )}
         {...props}
@@ -53,7 +53,7 @@ ProductCard.Content = forwardRef<HTMLDivElement, ComponentProps<"div">>(
     return (
       <div
         ref={ref}
-        className="flex flex-col w-full h-[135px] m-0 py-3 px-1.5 gap-2"
+        className="flex flex-col w-full min-h-[135px] max-h-full m-0 py-3 px-1.5 gap-2"
       >
         {children}
       </div>

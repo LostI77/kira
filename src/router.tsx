@@ -58,8 +58,19 @@ export const router = createBrowserRouter([
         path: "soporte",
         element: <Support />,
         loader: async () => {
-          const res = await fetch("/api/support/cards");
-          return res.json();
+          try {
+            const res = await fetch("/api/support/cards");
+
+            if (!res.ok)
+              throw new Error("Error getting support-cards information");
+
+            const data = await res.json();
+
+            return data;
+          } catch (err) {
+            console.error(err);
+            return { support_cards: [] };
+          }
         },
       },
       {
