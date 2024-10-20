@@ -40,7 +40,6 @@ class ShoppingCard(BaseModel):
 class ShoppingCardPatchBody(BaseModel):
     name: str
     current: int
-    type: str
 
 @app.get("/api", tags=["root"])
 async def read_root() -> dict:

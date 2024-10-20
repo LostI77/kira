@@ -2,6 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 
+import { useDebounce } from "@/hooks/useDebounce";
+
 import { PurchaseSummary } from "@composites/purchase-summary";
 import { ShoppingItem } from "@composites/shopping-item";
 import { Button } from "@components/button";
@@ -16,8 +18,13 @@ export const ShoppingCard = () => {
     shopping_card || []
   );
 
+  const [productsAmount, setProductsAmount] = useState<Record<string, number>>(
+    {}
+  );
   const [finalPrices, setFinalPrices] = useState<Record<string, number>>({});
   const [totalPrice, setTotalPrice] = useState<number>(0);
+
+  const debouncedProductsAmount = useDebounce(productsAmount, 350);
 
   useEffect(() => {
     setProductsCard(shopping_card);
@@ -29,10 +36,64 @@ export const ShoppingCard = () => {
       0
     );
     setTotalPrice(parseFloat(Number(total).toFixed(2)));
+
+    const newProductsAmount: Record<string, number> = {};
+
+    productsCard.forEach((product) => {
+      const formattedName = product.name;
+      newProductsAmount[formattedName] = 0; // Inicializamos en 0 o el valor que desees
+    });
+
+    setProductsAmount(newProductsAmount);
   }, [productsCard]);
 
+  useEffect(() => {
+    const updateProducts = async () => {
+      try {
+        const values: [string, number] = ["", 0];
+        for (const [name, clicks] of Object.entries(debouncedProductsAmount)) {
+          if (clicks > 0) {
+            values[0] = name;
+            values[1] = clicks;
+          }
+        }
+
+        const response = await fetch(`/api/users/user_1/shopping-card`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: values[0],
+            current: values[1] || 0,
+          }),
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          console.error("Error updating product amount:", errorData.detail);
+          return;
+        }
+
+        const result = await response.json();
+        console.log("New product amount:", result.new_amount);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+
+    updateProducts();
+  }, [debouncedProductsAmount]);
+
   const handleAmount = async (name: string, type: "less" | "more") => {
+    const formattedName: string = name;
     let current: number = 0;
+
+    setProductsAmount((prevAmounts) => ({
+      ...prevAmounts,
+      [formattedName]: prevAmounts[formattedName] + 1,
+    }));
+
     setProductsCard((prev) => {
       return prev.map((product) => {
         if (product.name === name) {
@@ -57,27 +118,6 @@ export const ShoppingCard = () => {
         return product;
       });
     });
-
-    try {
-      const response = await fetch(`/api/users/user_1/shopping-card`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, current, type }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        console.error("Error updating product amount:", errorData.detail);
-        return;
-      }
-
-      const result = await response.json();
-      console.log("New product amount:", result.new_amount);
-    } catch (error) {
-      console.error("Error:", error);
-    }
   };
 
   const handleRemoveProduct = async (name: string) => {
@@ -126,8 +166,11 @@ export const ShoppingCard = () => {
                   .toLowerCase()}-${i}`}
               >
                 <ShoppingItem.Image
-                  src="/img/GYpEGv-a4AAfD4F.jpeg"
-                  alt=""
+                  src={product.src || "/img/GYpEGv-a4AAfD4F.jpeg"}
+                  title={product.name}
+                  alt={product.name}
+                  loading="eager"
+                  decoding="async"
                   draggable="false"
                 />
                 <ShoppingItem.Details>
